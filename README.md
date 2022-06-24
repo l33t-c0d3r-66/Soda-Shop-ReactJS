@@ -74,3 +74,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+  
+## Project Screenshots:
+  
+<img src="https://github.com/l33t-c0d3r-66/Soda-Shop-ReactJS/blob/master/screenshots/ss1.PNG">
+  
+<img src="https://github.com/l33t-c0d3r-66/Soda-Shop-ReactJS/blob/master/screenshots/ss2.PNG">
+  
+<img src="https://github.com/l33t-c0d3r-66/Soda-Shop-ReactJS/blob/master/screenshots/ss3.PNG">
+  
+<img src="https://github.com/l33t-c0d3r-66/Soda-Shop-ReactJS/blob/master/screenshots/ss4.PNG">
+  
+<img src="https://github.com/l33t-c0d3r-66/Soda-Shop-ReactJS/blob/master/screenshots/ss5.PNG">
+  
