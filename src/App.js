@@ -3,6 +3,7 @@ import {Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Layout from './components/Layout/Layout';
+import SodaDetail from './components/SodaList/SodaDetail/SodaDetail';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </Route>
         <Route exact path="/about">
           <About />
+        </Route>
+        <Route exact path="/soda/:id">
+          <SodaDetail/>
         </Route>
       </Switch>
     </Layout>

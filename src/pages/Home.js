@@ -1,6 +1,12 @@
+import SearchForm from "../components/SearchForm/SearchForm";
+import SodaList from '../components/SodaList/SodaList';
+
 function Home() {
     return (
-        <div>Home</div>
+       <main>
+            <SearchForm />
+            <SodaList></SodaList>
+       </main>
     );
 }
 

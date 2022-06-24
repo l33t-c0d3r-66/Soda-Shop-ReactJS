@@ -1,0 +1,36 @@
+.Soda {
+    background: var(--mainWhite);
+    margin-bottom: 2rem;
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: var(--mainBorderRadius);
+}
+
+.Soda:hover{
+    box-shadow: var(--darkShadow);
+}
+
+.Soda img {
+    height: 20rem;
+    object-fit: cover;
+    border-top-left-radius: var(--mainBorderRadius);
+    border-top-right-radius: var(--mainBorderRadius);
+  }
+  .SodaFooter {
+    padding: 1.5rem;
+  }
+  .SodaFooter h3,
+  .SodaFooter h4,
+  .SodaFooter p {
+    margin-bottom: 0.3rem;
+  }
+  .SodaFooter h3 {
+    font-size: 2rem;
+  }
+  .SodaFooter p {
+    color: var(--darkGrey);
+    margin-bottom: 0.5rem;
+  }
+  

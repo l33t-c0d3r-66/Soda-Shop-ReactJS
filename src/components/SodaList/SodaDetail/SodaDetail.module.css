@@ -1,0 +1,52 @@
+.SodaDetail {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.SodaDetailTitle {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+
+.SodaDrink {
+    width: var(--smallWidth);
+    max-width: var(--fullWidth);
+    margin: 0 auto;
+    text-align: left;
+}
+.SodaDrink img {
+    border-radius: var(--mainBorderRadius);
+}
+.SodaDrink p {
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.8;
+}
+.SodaDrink span {
+    margin-right: 0.5rem;
+}
+.SodaDrinkData {
+    background: var(--primaryLightColor);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--mainBorderRadius);
+    color: var(--primaryColor);
+}
+.SodaDrinkInfo {
+    padding-top: 2rem;
+}
+@media screen and (min-width: 992px) {
+    .SodaDrink {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .SodaDrinkInfo {
+      padding-top: 0;
+    }
+}
+  
