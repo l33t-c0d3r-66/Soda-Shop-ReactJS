@@ -15,6 +15,9 @@ function MainNavigation () {
                         <Link to="/">Home</Link>
                     </li>
                     <li>
+                        <Link to="/add">Add Soda</Link>
+                    </li>
+                    <li>
                         <Link to="/about">About</Link>
                     </li>
                 </ul>
