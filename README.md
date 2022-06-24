@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Soda Shop ReactJS
+<li> This is a web application created using React.
+<li> This Project is a front End for Soda Shop Spring Boot (https://github.com/l33t-c0d3r-66/Soda-Shop-SpringBoot)
+<li> This Project uses useState, useHistory, and useEffect Hooks
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
