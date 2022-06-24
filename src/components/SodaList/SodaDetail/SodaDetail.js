@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Loading from "../../UI/Loading/Loading";
 import cssClasses from './SodaDetail.module.css';
 
-const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+const url = "http://localhost:8080/soda/"
 
 
 function SodaDetail() {
@@ -15,33 +15,8 @@ function SodaDetail() {
         try {
             const response = await fetch(`${url}${id}`);
             const data = await response.json(); 
-            const {drinks} = data;
-            if(drinks) {
-                const {
-                    strDrink: name,
-                    strDrinkThumb: image,
-                    strAlcoholic: info,
-                    strCategory: category,
-                    strGlass: glass,
-                    strInstructions: instructions,
-                    strIngredient1,
-                    strIngredient2,
-                    strIngredient3,
-                    strIngredient4,
-                    strIngredient5,
-                } = data.drinks[0];
-                const ingredients = [
-                    strIngredient1, 
-                    strIngredient2, 
-                    strIngredient3, 
-                    strIngredient4, 
-                    strIngredient5
-                ];
-                const newSoda = {
-                    name, image, info, category,glass, instructions, ingredients
-                };
-                setSoda(newSoda);
-
+            if(data) {
+                setSoda(data);
             } else {
                 setSoda(null);
             }
@@ -77,25 +52,37 @@ function SodaDetail() {
                         {soda.name}
                     </p>
                     <p>
-                        <span className={cssClasses.SodaDrinkData}>Categoy:</span>
-                        {soda.category}
+                        <span className={cssClasses.SodaDrinkData}>Price:</span>
+                        {soda.price} USD
                     </p>
                     <p>
-                        <span className={cssClasses.SodaDrinkData}>Info:</span>
-                        {soda.info}
-                    </p>
-                    <p>
-                        <span className={cssClasses.SodaDrinkData}>Glas:</span>
+                        <span className={cssClasses.SodaDrinkData}>Glass:</span>
                         {soda.glass}
                     </p>
                     <p>
-                        <span className={cssClasses.SodaDrinkData}>Instructions:</span>
-                        {soda.instructions}
+                        <span className={cssClasses.SodaDrinkData}>Glass Size:</span>
+                        {soda.glassSize}
                     </p>
                     <p>
-                        <span className={cssClasses.SodaDrinkData}>ingredients:</span>
-                        {soda.ingredients.map((item, index) => {
-                            return item? <span key={index}>{item}</span>: null;
+                        <span className={cssClasses.SodaDrinkData}>Ingredients:</span>
+                        {soda.ingredients.split('\n').map((item, index) =>{
+                            if(index === 0) 
+                                return <span key={index}>{index+1}. {item}</span>;
+                            return item?(<div style={{marginLeft: '17%'}}>
+                                    <span key={index}>{index+1}. {item}</span>
+                                </div>
+                            ):null;
+                        })} 
+                    </p>
+                    <p>
+                        <span className={cssClasses.SodaDrinkData}>Instructions:</span>
+                        {soda.instruction.split("\n").map((item, index) => {
+                             if(index === 0) 
+                                return <span key={index}>{index+1}. {item}</span>;
+                            return item?(<div style={{marginLeft: '17%'}}>
+                                     <span key={index}>{index+1}. {item}</span>
+                                 </div>
+                             ):null;
                         })}
                     </p>
                 </div>

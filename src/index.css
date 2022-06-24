@@ -8,7 +8,7 @@
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #afafaf;
+  --darkGrey: #616161;
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
@@ -102,6 +102,11 @@ Buttons
   background: var(--primaryColor);
   color: var(--mainWhite);
   border-color: transparent;
+  box-shadow: 0 5px 0 var(--primaryColor);
+}
+.btn:active{
+  box-shadow: none;
+  transform: translateY(5px);
 }
 .btn-primary:hover {
   background: var(--primaryLightColor);

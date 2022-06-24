@@ -13,7 +13,7 @@
 }
 
 .Soda img {
-    height: 20rem;
+    height: 80%;
     object-fit: cover;
     border-top-left-radius: var(--mainBorderRadius);
     border-top-right-radius: var(--mainBorderRadius);

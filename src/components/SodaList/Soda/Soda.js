@@ -11,9 +11,11 @@ function Soda (props) {
             <div className={cssClasses.SodaFooter}>
                 <h3>{props.name}</h3>
                 <h4>{props.glass}</h4>
-                <p>{props.info}</p>
-                <Link to={`/soda/${props.id}`} className="btn btn-primary btn-details">Details</Link>
+                <p><strong>{props.price}</strong> USD</p>
             </div>
+            <Link to={`/soda/${props.id}`} style={{textAlign: 'center', paddingTop:'10px'}}className="btn btn-primary btn-details">
+                <h3>Details</h3>
+            </Link>
         </article>
     );
 }
