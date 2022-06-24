@@ -23,6 +23,7 @@ function SodaForm(props) {
         };
 
         props.addHandler(formData);
+
     }
 
     return (

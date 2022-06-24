@@ -13,7 +13,7 @@ function Soda (props) {
                 <h4>{props.glass}</h4>
                 <p><strong>{props.price}</strong> USD</p>
             </div>
-            <Link to={`/soda/${props.id}`} style={{textAlign: 'center', paddingTop:'10px'}}className="btn btn-primary btn-details">
+            <Link to={`/soda/${props.id}`} style={{textAlign: 'center', paddingTop:'10px'}} className="btn btn-primary btn-details">
                 <h3>Details</h3>
             </Link>
         </article>

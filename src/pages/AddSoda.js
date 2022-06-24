@@ -1,9 +1,9 @@
 import { useHistory } from "react-router-dom";
 import SodaForm from "../components/SodaForm/SodaForm";
-
+import {useGlobalContext} from '../context/context';
 function AddSoda () {
+    const  {setSodas, sodas} =  useGlobalContext();
     const history = useHistory();
-
     function addSodaHandler(data) {
         fetch("http://localhost:8080/soda",
             {
@@ -13,10 +13,16 @@ function AddSoda () {
                     'Content-Type': 'application/json'
                 }
             }
-        ).then(()=> {
-            history.replace('/');
+        ).then((response)=> {
+            return response.json();
+        }).then(res=> {
+            console.log(res);
+            if(res) {
+                setSodas(sodas.concat(res));
+                history.replace("/");
+            }
         });
-
+        
     }
     return (
         <section className="section about-section">

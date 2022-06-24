@@ -32,7 +32,7 @@ const AppProvider = ({ children }) => {
     }, [searchTerm, fetchDrinks]);
 
   return <AppContext.Provider value={{
-    loading, searchTerm, sodas, setSearchTerm
+    loading, searchTerm, sodas, setSearchTerm, setSodas
   }}>{children}</AppContext.Provider>
 }
 // make sure use
