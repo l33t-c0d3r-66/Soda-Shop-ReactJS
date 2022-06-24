@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, Switch} from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Layout from './components/Layout/Layout';
@@ -22,6 +22,7 @@ function App() {
         <Route exact path="/soda/:id">
           <SodaDetail/>
         </Route>
+        <Redirect to="/"></Redirect>
       </Switch>
     </Layout>
   );
